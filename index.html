@@ -3,16 +3,20 @@
 <head>
 <meta http-equiv='X-UA-Compatible' content='IE=edge' />
 <title>Hello World</title>
-
 <script id='sap-ui-bootstrap'
     src='resources/sap-ui-core.js'
     data-sap-ui-theme='sap_belize'
     data-sap-ui-libs='sap.m'
     data-sap-ui-compatVersion='edge'
     data-sap-ui-preload='async'>
+    //sap.m controla la UI
+    //sap_belize es el tema escogido para la página
+    //edge se usa para usar la funcionalidad mas reciente de OpenUI5
+    //async indica que el proceso de 'bootstraping'("arranque") sea asíncrono
 </script>
 
 <script>
+      //Cuando las librerías de sap están listas, realiza la función indicada. Core es un singleton.
      sap.ui.getCore().attachInit(function () {
          jQuery("#content").html("Hello World - UI5 is ready");
      });
