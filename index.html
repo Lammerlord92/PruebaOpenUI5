@@ -17,9 +17,14 @@
 
 <script>
       //Cuando las librerías de sap están listas, realiza la función indicada. Core es un singleton.
-     sap.ui.getCore().attachInit(function () {
-         jQuery("#content").html("Hello World - UI5 is ready");
-     });
+      sap.ui.getCore().attachInit(function () {
+          new sap.m.Text({
+              text: "Hello World"
+          }).placeAt("content");//Pone en content el texto dentro del div 'content'
+          new sap.m.Text({
+              text: "Hello World 2"
+          }).placeAt("content");//Pone en content el texto dentro del div 'content', justo detrás del anterior
+      });
 </script>
 
 </head>
